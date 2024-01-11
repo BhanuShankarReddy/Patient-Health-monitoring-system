@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Patient Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: grid;
+            gap: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button.view-button {
+            background-color: #3498db;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Hospital Patient Form</h1>
+    <form action="patientDetails" method="post">
+        <label for="patientName">Patient Name:</label>
+        <input type="text" id="patientName" name="patientName" required>
+
+        <label for="patientID">Patient ID:</label>
+        <input type="text" id="patientID" name="patientID" required>
+
+        <label for="patientAge">Patient Age:</label>
+        <input type="number" id="patientAge" name="patientAge" required>
+
+        <label for="patientBlock">Patient Block:</label>
+        <select id="patientBlock" name="patientBlock" required>
+            <option value="A">Block A</option>
+            <option value="B">Block B</option>
+            <option value="C">Block C</option>
+        </select>
+
+        <button type="submit">Submit</button>
+        <button type="button" class="view-button" onclick="viewCardiacRate()">View Cardiac Rate</button>
+    </form>
+</div>
+
+<script>
+    function viewCardiacRate() {
+        // Add functionality to view cardiac rate here
+        alert("Cardiac rate: [Retrieve and display the cardiac rate here]");
+    }
+</script>
+
+</body>
+</html>
